@@ -261,14 +261,14 @@
 // }
 // console.log(Char_Counts("full stack web development"));
 
-//18. Write a function for searching JavaScript arrays with a binary search. 
+//18. Write a function for searching JavaScript arrays with a binary search.
 // function binarySearch(narray, delement) {
 //   var mposition = Math.floor(narray.length / 2);
 
 //   if (narray[mposition] === delement){
 //      return mposition;
 //   }
-//   else if (narray.length === 1) 
+//   else if (narray.length === 1)
 //   {
 //      return null;
 //   }
@@ -291,7 +291,7 @@
 // var myArray = [1, 2, 3, 5, 6, 7, 10, 11, 14, 15, 17, 19, 20, 22, 23];
 // console.log(binarySearch(myArray, 6));
 
-// 19. Write a JavaScript function that returns array elements larger than a number. 
+// 19. Write a JavaScript function that returns array elements larger than a number.
 // function BiggerElements(val)
 //    {
 //      return function(evalue, index, array)
@@ -302,17 +302,135 @@
 // var result = [1, 15, 4, 26, 34, 11]. filter(BiggerElements(10));
 // console.log(result);
 
-// 20. Write a JavaScript function that generates a string id (specified length) of random characters. 
-function stringId(l)
-{
-var text = "";
-var string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-for(var i=0; i < l; i++ )
-{  
-text += string.charAt(Math.floor(Math.random() * string.length));
-}
-return text;
-}
-console.log(stringId(6));
+// 20. Write a JavaScript function that generates a string id (specified length) of random characters.
+// function stringId(l)
+// {
+// var text = "";
+// var string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+// for(var i=0; i < l; i++ )
+// {
+// text += string.charAt(Math.floor(Math.random() * string.length));
+// }
+// return text;
+// }
+// console.log(stringId(6));
 
-// 21. Write a JavaScript function to get all possible subset with a fixed length (for example 2) combinations in an array. 
+// 21. Write a JavaScript function to get all possible subset with a fixed length (for example 2) combinations in an array.
+// function subset(arr, arr_size)
+//  {
+//     var result_set = [],
+//         result;
+
+// for(var x = 0; x < Math.pow(2, arr.length); x++)
+//   {
+//     result = [];
+//     i = arr.length - 1;
+//      do
+//       {
+//       if( (x & (1 << i)) !== 0)
+//           {
+//              result.push(arr[i]);
+//            }
+//         }  while(i--);
+
+//     if( result.length >= arr_size)
+//        {
+//           result_set.push(result);
+//         }
+//     }
+
+//     return result_set;
+// }
+
+// console.log(subset([1, 2, 3], 2));
+
+// 22. Write a JavaScript function that accepts two arguments, a string and a letter and
+//the function will count the number of occurrences of the specified letter within the string.
+// function countOccurrences(str, l) {
+//   var letterCount = 0;
+//   for (var i = 0; i < str.length; i++) {
+//     if (str.charAt(i) == l) {
+//       letterCount += 1;
+//     }
+//   }
+//   return letterCount;
+// }
+// console.log(countOccurrences("development", "e"))
+
+// 23. Write a JavaScript function to find the first not repeated character.
+// function notRepeatedChar(str) {
+//   var arr = str.split('');
+//   console.log(arr);
+//   var res = '';
+//   var ctr = 0;
+//   for (var x = 0; x < arr.length; x++) {
+//     ctr = 0;
+//     for (var y = 0; y < arr.length; y++) {
+//       if (arr[x] === arr[y]) {
+//         ctr+= 1
+//       }
+//     }
+//     if (ctr < 2) {
+//       res = arr[x];
+//       break;
+//     }
+//   }
+//   return res;
+// }
+// console.log(notRepeatedChar('abacddbec'))
+
+// 24. Write a JavaScript function to apply Bubble Sort algorithm.
+// function bubble_Sort(a)
+// {
+//     var swapp;
+//     var n = a.length-1;
+//     var x=a;
+//     do {
+//         swapp = false;
+//         for (var i=0; i < n; i++)
+//         {
+//             if (x[i] < x[i+1])
+//             {
+//                var temp = x[i];
+//                x[i] = x[i+1];
+//                x[i+1] = temp;
+//                swapp = true;
+//             }
+//         }
+//         n--;
+//     } while (swapp);
+//  return x;
+// }
+
+// console.log(bubble_Sort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
+
+// 25. Write a JavaScript function that accept a list of country names as input and
+//returns the longest country name as output
+// function longestCountry(countries) {
+//   return countries.reduce(function (lname, country) {
+//     return lname.length > country.length ? lname : country;
+//   });
+// }
+// console.log(
+//   longestCountry(["Australia", "Germany", "United States of America"])
+// );
+
+// 26. Write a JavaScript function to find longest substring in a given a string without repeating characters.
+
+// 27. Write a JavaScript function that returns the longest palindrome in a given string.
+
+// 28. Write a JavaScript program to pass a 'JavaScript function' as parameter.
+// function javascriptProgram(id, callBackFunction) {
+//   callBackFunction();
+// }
+
+// function refreshStudentList() {
+//   console.log("Call back function is executed");
+// }
+// javascriptProgram(1, refreshStudentList);
+
+// 29. Write a JavaScript function to get the function name. 
+// var f = function myFunctionName() {
+//   console.log("this is an example function")
+// }
+// console.log(f.name)
